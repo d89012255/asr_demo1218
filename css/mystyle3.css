@@ -1,0 +1,223 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h4,
+h6,
+div,
+span {
+  font-family: PingFangSC-Regular, sans-serif, Microsoft JhengHei;
+  
+}
+.detail{
+    display: flex;
+}
+.machine_data{
+    width: 1200px;
+    height: 500px;
+    background-color: #F2F5F8;
+    border-radius:15px; 
+    margin-left: 3%;
+    margin-top: 50px;
+}
+.machine_name{
+    background-color: #7595AC;
+    border-radius:15px; 
+    width: 1200px;
+    height: 70px;
+    display: flex;
+
+}
+.machine_title{
+    margin-top: 15px;
+    color: white;
+    font-family: PingFangSC-Regular, sans-serif, Microsoft JhengHei;
+    font-weight: bold;
+    font-size: 35px;
+    margin-left: 10px;
+    
+}
+.mahine_select{
+    height: 50px;
+    margin-top: 13px;
+}
+.slide_rail{
+    display: flex;
+}
+.orange_line{
+    width: 10px;
+    height: 10px;
+    background-color: orange;
+    margin-top: 10px;
+    margin-right: 10px;
+    
+}
+.data_input_form{
+    display: flex;
+    height: 50px;
+    width: 400px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 0px;
+    border-right: 1px dashed gray; /* 设置2像素宽度的橘色虚线边框 */
+}
+.data_input_form2{
+    display: flex;
+    height: 50px;
+    width: 400px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 0px;
+
+}
+.try_color{
+    width: 200px;
+}
+.textbox{
+    height: 30px;
+    width: 130px;
+    margin-top: 3px;
+}
+.detail_down{
+    margin-top: 20px;
+    margin-left: 3%;
+    display: flex;
+    justify-content:space-between;
+    width: 1200px;
+}
+
+.equipment_num2{
+    margin-top: 20px;
+    margin-left: 1%;
+    height: 200px;
+    width: 307.5px;
+  
+    background-color: white;
+    border-radius:10px; 
+}
+.title3{
+    display: flex;
+    margin-top: 0px;
+    justify-content: center;
+    margin-top: 5px;
+    background-color: #7595AC;
+    border-radius:15px; 
+    color: white;
+    height: 80px;
+}
+.title_font2{
+    font-size: 32px;
+    margin-top: 20px;
+    font-weight: bold;   
+
+}
+.title4{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.title_font3{
+    font-size: 40px;
+
+    font-weight: bold;   
+
+}
+.human_record{
+    margin-top: 30px;
+}
+.space{
+    height: 40px;
+}
+.textbox2{
+    height: 170px;
+}
+
+.push_button{
+	width:220px;
+	height:70px;
+    font-family: PingFangSC-Regular, sans-serif, Microsoft JhengHei;
+    font-size: 26px;
+    
+
+
+    background-color: white; 
+    color: black; 
+    border: 2px solid #7595AC;
+    border-radius:15px; 
+    cursor: pointer;
+}
+.push_button:hover{
+    background-color:#7595AC;
+    color: white;
+}
+
+.function{
+    margin-left: 5%;
+    background-color: #F2F5F8;
+    height: 770px;
+    width: 300px;
+    margin-top: 20px;
+    border-radius:15px; 
+   
+   
+}
+.btn-home,.btn-machine-info,.btn-authentication-set,.btn-authentication-status,.btn-authentication-start,.btn-illegal-behavior,.btn-sensor-info{
+    margin-left: 10%;
+    margin-top: 20px;
+    
+}
+
+.btn2{
+    height: 40px;
+    width: 230px;
+    font-family: PingFangSC-Regular, sans-serif, Microsoft JhengHei;
+    font-size: 26px;
+    
+
+
+    background-color: white; 
+    color: black; 
+    border: 2px solid #7595AC;
+    border-radius:15px; 
+    cursor: pointer;
+}
+.btn2:hover{
+    background-color: #7595AC;
+    color: white;
+}
+.equipment_num{
+    margin-top: 20px;
+    border-top: 3px dashed gray; /* 设置2像素宽度的橘色虚线边框 */
+    width: 80%;
+    margin-left: 10%;
+
+    height: 400px;
+}
+.time_show{
+    margin-top: 20px;
+    background-color: white;
+    border-radius:15px; 
+    height: 160px;
+}
+.title{
+    display: flex;
+    margin-top: 0px;
+    justify-content: center;
+    margin-top: 5px;
+    background-color: #7595AC;
+    border-radius:15px; 
+    color: white;
+    height: 50px;
+    
+}
+.title_font{
+    font-size: 30px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.title2{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}

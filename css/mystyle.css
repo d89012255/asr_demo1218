@@ -1,0 +1,139 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+  
+* {
+    box-sizing: border-box;
+}  
+p,
+h1,
+h2,
+h3,
+h4,
+h4,
+h6,
+div,
+span {
+  font-family: PingFangSC-Regular, sans-serif, Microsoft JhengHei;
+}
+
+p {
+  font-size: 21px;
+  font-weight: bold;
+}
+.navbar-brand-img{
+  height:50px;
+}
+
+.nav-link{
+  font-size: bold;
+}
+@media (min-width: 768px) {
+  /*nav選單*/
+  .navbar {
+    /*padding-left: 50px !important;*/
+    padding-right: 50px !important;
+    z-index:9999;
+    position: relative;
+  }
+}
+.side .container-fluid {
+  padding: 0 !important;
+}
+.side{
+
+  background-color: #95b19c;
+  height: 870px;
+  width: 150px;
+  margin-top: -50.5%;
+  padding-top: 60px;
+  padding-left: 18px;
+  z-index:9998;
+  position: relative;
+
+}
+
+.my-btn{
+  margin-top: 30px;
+}
+.recog{
+  margin-top: -46.5%;
+  z-index:9997;
+  position: relative;
+  
+}
+.textbox2{
+  height: 300px;
+  width: 100%;
+}
+
+
+/*newest*/
+.newest {
+  padding: 30px 0 0px 0 ;
+  background: linear-gradient(#f0e5de, #f0e5de);
+  min-height: 90%; /*外層高度100%*/
+  margin-bottom: -30px; /*隨footer高度需做調整*/
+ 
+  
+}
+.my-btn{
+  font-size: 22px;
+}
+.title2 {
+  font-size: 60px;
+  font-weight: bold;
+}
+.title3{
+  font-size: 30px;
+  font-weight: bold;
+}
+.title4{
+  font-size: 30px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+.title6{
+  font-weight: bold;
+  font-size: 25px;
+  color: red;
+}
+.right_now,.label_time,.times{
+  color:#7595AC;
+}
+.textbox{
+  width: 130px;
+  
+}
+
+.text_bank{
+  margin-left: -2%;
+  margin-right: 2%;
+}
+.machine{
+  padding-top: 20px;
+  z-index:9998;
+  position: relative;
+}
+.label{
+  padding-top: 30px;
+}
+
+footer {
+  background-color: #c1adad;
+  padding: 20px 0;
+  height: 60px;
+  z-index:9999;
+  position: relative;
+}
+
+footer p {
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 7px;
+}
+

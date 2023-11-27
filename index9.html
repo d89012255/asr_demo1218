@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/mystyle.css">
+        <meta charset="UTF-8">
+        <title>標題</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/mystyle3.css" rel="stylesheet">	
+
+
+    </head>
+    <body style = "background-color:#DAE4EB;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index9.html"><img class ="navbar-brand-img" src="img/logo.png" alt=""></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+            
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+
+                </ul>
+              </div>
+        </nav>
+        <div class="detail">
+            <div class="detail_left">
+                <div class="detail_down">
+                    <div class="human_record">     
+                        <div class="record">
+                            <input class = "push_button red" id="myBtnStart" type="button" value="開始辨識">
+                            <div class="space"></div>
+                            <input class = "push_button blue" id="myBtnPlay" type="button" value="結束辨識">
+                        </div>
+                    </div>
+                    <div class="recognition_result">
+                        <div class="equipment_num2">
+                            <div class="title3">
+                                <h5 class="title_font2">辨識結果</h5>
+                            </div>
+                            <div class="title4">
+                                <h1 class="title_font3" id="result">下一筆</h1>  
+                            </div>                           
+                        </div>
+                    </div>
+                    <div class="show_for_mic_status">
+                        <div class="equipment_num2">
+                            <div class="title3">
+                                <h5 class="title_font2">語音錄製倒數計時</h5>
+                            </div>
+                            <div class="title4">
+                                <h1 class="title_font3" id="times">5</h1>  
+                            </div>                                
+
+                        </div>
+                    </div>
+                </div>
+                <div class="machine_data">
+                    <div class="machine_name">
+                        <h1 class="machine_title">組裝機台型號：</h1>
+                        <select class="mahine_select">
+                            <option>請選擇組裝機台型號</option>
+                            <option>AA1101-臥式CNC機台</option>
+                            <option>AA1102-車床CNC機台</option>
+                            <option>AA1103-射出CNC機台</option>
+                            <option>AA1104-五軸CNC機台</option>
+                        </select>
+                    </div>
+                    <div class="slide_rail">
+                        <div class="data_input_form">
+                            <span class="orange_line"></span>
+                            <p class="try_color" id="旋轉軸">線性滑軌X軸長度：</p>
+                            <input class = "textbox" id="旋轉軸1" type="text">
+                        </div>
+                        <div class="data_input_form">
+                            <span class="orange_line"></span>
+                            <p class="try_color" id="旋轉軸">線性滑軌Y軸長度：</p>
+                            <input class = "textbox" id="旋轉軸1" type="text">
+                        </div>   
+                        <div class="data_input_form2">
+                            <span class="orange_line"></span>
+                            <p class="try_color" id="旋轉軸">線性滑軌Z軸長度：</p>
+                            <input class = "textbox" id="旋轉軸1" type="text">
+                        </div>
+                    </div>
+                    <div class="slide_rail">
+                        <div class="data_input_form">
+                            <span class="orange_line"></span>
+                            <p class="try_color" id="旋轉軸">線性滑軌X軸長度：</p>
+                            <input class = "textbox" id="旋轉軸1" type="text" disabled="true">
+                        </div>
+                        <div class="data_input_form">
+                            <span class="orange_line"></span>
+                            <p class="try_color" id="旋轉軸">線性滑軌Y軸長度：</p>
+                            <input class = "textbox" id="旋轉軸1" type="text" disabled="true">
+                        </div>   
+                        <div class="data_input_form2">
+                            <span class="orange_line"></span>
+                            <p class="try_color" id="旋轉軸">線性滑軌Z軸長度：</p>
+                            <input class = "textbox" id="旋轉軸1" type="text" disabled="true">
+                        </div>
+                    </div>
+                    <div class="slide_rail">
+                        <div class="data_input_form">
+                            <span class="orange_line"></span>
+                            <p class="try_color" id="旋轉軸">線性滑軌X軸長度：</p>
+                            <input class = "textbox" id="旋轉軸1" type="text" disabled="true">
+                        </div>
+                        <div class="data_input_form">
+                            <span class="orange_line"></span>
+                            <p class="try_color" id="旋轉軸">線性滑軌Y軸長度：</p>
+                            <input class = "textbox" id="旋轉軸1" type="text" disabled="true">
+                        </div>   
+                        <div class="data_input_form2">
+                            <span class="orange_line"></span>
+                            <p class="try_color" id="旋轉軸">線性滑軌Z軸長度：</p>
+                            <input class = "textbox" id="旋轉軸1" type="text" disabled="true">
+                        </div>
+                    </div>
+                    <div class="slide_rail">
+                        <div class="data_input_form">
+                            <span class="orange_line"></span>
+                            <p class="try_color" id="旋轉軸">線性滑軌X軸長度：</p>
+                            <input class = "textbox" id="旋轉軸1" type="text" disabled="true">
+                        </div>
+                        <div class="data_input_form">
+                            <span class="orange_line"></span>
+                            <p class="try_color" id="旋轉軸">線性滑軌Y軸長度：</p>
+                            <input class = "textbox" id="旋轉軸1" type="text" disabled="true">
+                        </div>   
+                        <div class="data_input_form2">
+                            <span class="orange_line"></span>
+                            <p class="try_color" id="旋轉軸">線性滑軌Z軸長度：</p>
+                            <input class = "textbox" id="旋轉軸1" type="text" disabled="true">
+                        </div>
+                    </div>
+                    <div class="slide_rail">
+                        <div class="data_input_form">
+                            <span class="orange_line"></span>
+                            <p class="try_color" id="旋轉軸">線性滑軌X軸長度：</p>
+                            <input class = "textbox" id="旋轉軸1" type="text" disabled="true">
+                        </div>
+                        <div class="data_input_form">
+                            <span class="orange_line"></span>
+                            <p class="try_color" id="旋轉軸">線性滑軌Y軸長度：</p>
+                            <input class = "textbox" id="旋轉軸1" type="text" disabled="true">
+                        </div>   
+                        <div class="data_input_form2">
+                            <span class="orange_line"></span>
+                            <p class="try_color" id="旋轉軸">線性滑軌Z軸長度：</p>
+                            <input class = "textbox" id="旋轉軸1" type="text" disabled="true">
+                        </div>
+                    </div>
+                    <div class="slide_rail">
+                        <div class="data_input_form">
+                            <span class="orange_line"></span>
+                            <p class="try_color" id="旋轉軸">線性滑軌X軸長度：</p>
+                            <input class = "textbox" id="旋轉軸1" type="text" disabled="true">
+                        </div>
+                        <div class="data_input_form">
+                            <span class="orange_line"></span>
+                            <p class="try_color" id="旋轉軸">線性滑軌Y軸長度：</p>
+                            <input class = "textbox" id="旋轉軸1" type="text" disabled="true">
+                        </div>
+                    </div>          
+                </div>
+
+                
+            </div>
+            <div class="function">
+                <div class="btn-home">
+                    <button type="button" class="btn2" onClick="location.href='index9.html'">線上錄音</button>
+                </div>
+                <div class="btn-machine-info">
+                    <button type="button" class="btn2" onClick="location.href='index9.html'">機台狀況</button>
+                </div>
+                <div class="btn-sensor-info">
+                    <button type="button" class="btn2" onClick="location.href='index9.html'">歷史狀況</button>
+                </div>
+                <div class="btn-authentication-status">
+                    <button type="button" class="btn2" onClick="location.href='index9.html'">警報設定</button>
+                </div>
+                <div class="btn-authentication-start">
+                    <button type="button" class="btn2" onClick="location.href='index9.html'">歷史警報</button>
+                </div>
+                <div class="btn-illegal-behavior">
+                    <button type="button" class="btn2" onClick="location.href='index9.html'">趨勢圖查詢</button>
+                </div>
+                <div class="equipment_num">
+                    <div class="time_show">
+                        <div class="title">
+                            <h5 class="title_font">目前時間</h5>
+                        </div>
+                        <div class="title2">
+                            <h1 id="current-time"></h1>  
+                        </div>     
+                    </div>   
+                    <div class="time_show">
+                        <div class="title">
+                            <h5 class="title_font">目前廠區噪音</h5>
+                        </div>
+                        <div class="title2">
+                            <h1>95</h1>  
+                        </div>     
+                    </div>                   
+
+                </div>
+
+            </div>
+        </div>
+
+        <script type="module" src="js/jquery-latest.js"></script>
+        <script type="module" src="js/time.js"></script>
+        <script type="module" src="js/tempp3.js"></script>
+
+        
+
+
+    </body>
+</html>
