@@ -86,7 +86,53 @@ span {
     justify-content:space-between;
     width: 1200px;
 }
+.databse_grid{
+    margin-top: 53px;
+    margin-left: 3%;
+    display: flex;
+    justify-content:space-between;
+    width: 1200px;
+    overflow:hidden;
+    border-radius:10px 10px 0px 0px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+ 
+}
 
+table{
+  font-family: 'Oswald', sans-serif;
+  border-collapse:collapse;
+
+}
+
+th{
+  background-color:#7595AC;
+  color:#ffffff;
+  width:25vw;
+  height:60px;
+  text-align:center;
+  font-size: 25px;
+}
+
+td{
+  background-color:#ffffff;
+  width:25vw;
+  height:48px;
+  text-align:center;
+  font-size: 20px;
+}
+
+tr{
+  border-bottom: 1px solid #dddddd;
+  font-family: PingFangSC-Regular, sans-serif, Microsoft JhengHei;
+}
+
+tr:last-of-type{
+  border-bottom: 2px solid #7595AC;
+}
+
+tr:nth-of-type(even) td{
+  background-color:#f3f3f3;
+}
 .equipment_num2{
     margin-top: 20px;
     margin-left: 1%;

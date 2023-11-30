@@ -6,11 +6,13 @@
         <title>標題</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/mystyle3.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
         <script src="js/recorder-core.js" onerror="!window.onBadCDN||onBadCDN()" onload="!window.onOKCDN||onOKCDN()"></script>
 
         <script src="js/engine/mp3.js"></script>
         <script src="js/engine/wav.js"></script>
-        <script src="js/engine/mp3-engine.js"></script>	
+        <script src="js/engine/mp3-engine.js"></script>
 
 
     </head>
@@ -59,141 +61,149 @@
                         </div>
                     </div>
                 </div>
-                <div class="machine_data">
+                <div class="machine_data"  id="machine_data">
                     <div class="machine_name">
                         <h1 class="machine_title">組裝機台型號：</h1>
                         <select class="mahine_select" id="mahine_select">
                             <option>請選擇組裝機台型號</option>
-                            <option>AA1101-臥式CNC機台</option>
-                            <option>AA1102-車床CNC機台</option>
-                            <option>AA1103-射出CNC機台</option>
-                            <option>AA1104-五軸CNC機台</option>
+                            <option>AA1101-臥式CNC機台滑軌</option>
+                            <option>AA1102-車床CNC機台滑軌</option>
+                            <option>AA1103-射出CNC機台滑軌</option>
+                            <option>AA1104-五軸CNC機台滑軌</option>
                         </select>
                     </div>
                     <div class="slide_rail">
                         <div class="data_input_form">
                             <span class="orange_line"></span>
-                            <p class="try_color" id="滑軌X軸1l">滑軌X軸長度：</p>
+                            <p class="try_color" id="滑軌X軸1l">點位一左滑軌寬度：</p>
                             <input class = "textbox" id="滑軌X軸1" type="text">
                         </div>
                         <div class="data_input_form">
                             <span class="orange_line"></span>
-                            <p class="try_color" id="滑軌X軸2l">滑軌X軸平行度：</p>
+                            <p class="try_color" id="滑軌X軸2l">點位一右滑軌寬度：</p>
                             <input class = "textbox" id="滑軌X軸2" type="text">
                         </div>   
                         <div class="data_input_form2">
                             <span class="orange_line"></span>
-                            <p class="try_color" id="滑軌X軸3l">滑軌X軸垂直度：</p>
+                            <p class="try_color" id="滑軌X軸3l">點位一總滑軌寬度：</p>
                             <input class = "textbox" id="滑軌X軸3" type="text">
                         </div>
                     </div>
                     <div class="slide_rail">
                         <div class="data_input_form">
                             <span class="orange_line"></span>
-                            <p class="try_color" id="滑軌Y軸1l">滑軌Y軸長度：</p>
+                            <p class="try_color" id="滑軌Y軸1l">點位二左滑軌寬度：</p>
                             <input class = "textbox" id="滑軌Y軸1" type="text" disabled="true">
                         </div>
                         <div class="data_input_form">
                             <span class="orange_line"></span>
-                            <p class="try_color" id="滑軌Y軸2l">滑軌Y軸平行度：</p>
+                            <p class="try_color" id="滑軌Y軸2l">點位二右滑軌寬度：</p>
                             <input class = "textbox" id="滑軌Y軸2" type="text" disabled="true">
                         </div>   
                         <div class="data_input_form2">
                             <span class="orange_line"></span>
-                            <p class="try_color" id="滑軌Y軸3l">滑軌Y軸垂直度：</p>
+                            <p class="try_color" id="滑軌Y軸3l">點位二總滑軌寬度：</p>
                             <input class = "textbox" id="滑軌Y軸3" type="text" disabled="true">
                         </div>
                     </div>
                     <div class="slide_rail">
                         <div class="data_input_form">
                             <span class="orange_line"></span>
-                            <p class="try_color" id="滑軌Z軸1l">滑軌Z軸長度：</p>
+                            <p class="try_color" id="滑軌Z軸1l">點位三左滑軌寬度：</p>
                             <input class = "textbox" id="滑軌Z軸1" type="text" disabled="true">
                         </div>
                         <div class="data_input_form">
                             <span class="orange_line"></span>
-                            <p class="try_color" id="滑軌Z軸2l">滑軌Z軸平行度：</p>
+                            <p class="try_color" id="滑軌Z軸2l">點位三右滑軌寬度：</p>
                             <input class = "textbox" id="滑軌Z軸2" type="text" disabled="true">
                         </div>   
                         <div class="data_input_form2">
                             <span class="orange_line"></span>
-                            <p class="try_color" id="滑軌Z軸3l">滑軌Z軸垂直度：</p>
+                            <p class="try_color" id="滑軌Z軸3l">點位三總滑軌寬度：</p>
                             <input class = "textbox" id="滑軌Z軸3" type="text" disabled="true">
                         </div>
                     </div>      
                     <div class="slide_rail">
                         <div class="data_input_form">
                             <span class="orange_line"></span>
-                            <p class="try_color" id="主軸11l">主軸直徑：</p>
+                            <p class="try_color" id="主軸11l">點位四左滑軌寬度：</p>
                             <input class = "textbox" id="主軸11" type="text" disabled="true">
                         </div>
                         <div class="data_input_form">
                             <span class="orange_line"></span>
-                            <p class="try_color" id="主軸12l">主軸轉動平滑性：</p>
+                            <p class="try_color" id="主軸12l">點位四右滑軌寬度：</p>
                             <input class = "textbox" id="主軸12" type="text" disabled="true">
                         </div>   
                         <div class="data_input_form2">
                             <span class="orange_line"></span>
-                            <p class="try_color" id="主軸13l">主軸速度：</p>
+                            <p class="try_color" id="主軸13l">點位四總滑軌寬度：</p>
                             <input class = "textbox" id="主軸13" type="text" disabled="true">
                         </div>
                     </div>
                     <div class="slide_rail">
                         <div class="data_input_form">
                             <span class="orange_line"></span>
-                            <p class="try_color" id="主軸21l">主軸徑向誤差：</p>
+                            <p class="try_color" id="主軸21l">點位五左滑軌寬度：</p>
                             <input class = "textbox" id="主軸21" type="text" disabled="true">
                         </div>
                         <div class="data_input_form">
                             <span class="orange_line"></span>
-                            <p class="try_color" id="主軸22l">主軸軸向誤差：</p>
+                            <p class="try_color" id="主軸22l">點位五右滑軌寬度：</p>
                             <input class = "textbox" id="主軸22" type="text" disabled="true">
                         </div>   
                         <div class="data_input_form2">
                             <span class="orange_line"></span>
-                            <p class="try_color" id="主軸23l">主軸傾角擺動：</p>
+                            <p class="try_color" id="主軸23l">點位五總滑軌寬度：</p>
                             <input class = "textbox" id="主軸23" type="text" disabled="true">
                         </div>
                     </div>
                     <div class="slide_rail">
                         <div class="data_input_form">
                             <span class="orange_line"></span>
-                            <p class="try_color" id="主軸31l">主軸轉距：</p>
+                            <p class="try_color" id="主軸31l">點位六左滑軌寬度：</p>
                             <input class = "textbox" id="主軸31" type="text" disabled="true">
                         </div>
                         <div class="data_input_form">
                             <span class="orange_line"></span>
-                            <p class="try_color" id="主軸32l">主軸軸承之預壓：</p>
+                            <p class="try_color" id="主軸32l">點位六右滑軌寬度：</p>
                             <input class = "textbox" id="主軸32" type="text" disabled="true">
                         </div>   
                         <div class="data_input_form2">
                             <span class="orange_line"></span>
-                            <p class="try_color" id="主軸33l">主軸軸向游隙：</p>
+                            <p class="try_color" id="主軸33l">點位六總滑軌寬度：</p>
                             <input class = "textbox" id="主軸33" type="text" disabled="true">
                         </div>
                     </div>    
                 </div>
-
-                
+                <div class="databse_grid" id="databse_grid" style="display:none">
+                    <table id="tab">
+                        <tr>
+                          <th>組裝時間</th>
+                          <th>組裝機台型號</th>
+                          <th>測量零件參數</th>
+                          <th>測量數值</th>
+                        </tr>
+                    </table>
+                </div>                
             </div>
             <div class="function">
                 <div class="btn-home">
-                    <button type="button" class="btn2" onClick="location.href='index9.html'">線上錄音</button>
+                    <button type="button" class="btn2" onClick="location.href='index10.html'">線上錄音</button>
                 </div>
                 <div class="btn-machine-info">
-                    <button type="button" class="btn2" onClick="location.href='index9.html'">機台狀況</button>
+                    <button type="button" class="btn2" onClick="location.href='machine2.html'">組裝數據</button>
                 </div>
                 <div class="btn-sensor-info">
-                    <button type="button" class="btn2" onClick="location.href='index9.html'">歷史狀況</button>
+                    <button type="button" class="btn2" onClick="location.href='index10.html'">即時監控</button>
                 </div>
                 <div class="btn-authentication-status">
-                    <button type="button" class="btn2" onClick="location.href='index9.html'">警報設定</button>
+                    <button type="button" class="btn2" onClick="location.href='index10.html'">物料管理</button>
                 </div>
                 <div class="btn-authentication-start">
-                    <button type="button" class="btn2" onClick="location.href='index9.html'">歷史警報</button>
+                    <button type="button" class="btn2" onClick="location.href='index10.html'">生產排程</button>
                 </div>
                 <div class="btn-illegal-behavior">
-                    <button type="button" class="btn2" onClick="location.href='index9.html'">趨勢圖查詢</button>
+                    <button type="button" class="btn2" onClick="location.href='index10.html'">排班管理</button>
                 </div>
                 <div class="equipment_num">
                     <div class="time_show">
@@ -221,6 +231,7 @@
 
         <script type="module" src="js/time.js"></script>
         <script type="module" src="js/temp_wav.js"></script>
+
 
         
 

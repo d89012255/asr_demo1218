@@ -68,29 +68,32 @@ def limit_audio_below_threshold(audio_segment, threshold_db):
 
 
 def add_silence_to_wav_file(input_file, output_file, silence_duration_sec):
-    # 讀取WAV檔案
-    wav = wave.open(input_file, 'rb')
-    sample_width = wav.getsampwidth()
-    framerate = wav.getframerate()
-    num_frames = wav.getnframes()
+    try:
+        # 讀取WAV檔案
+        wav = wave.open(input_file, 'rb')
+        sample_width = wav.getsampwidth()
+        framerate = wav.getframerate()
+        num_frames = wav.getnframes()
 
-    # 讀取音訊資料
-    audio_data = np.frombuffer(wav.readframes(num_frames), dtype=np.int16)
+        # 讀取音訊資料
+        audio_data = np.frombuffer(wav.readframes(num_frames), dtype=np.int16)
 
-    # 產生空白音訊資料
-    silence_duration_frames = int(silence_duration_sec * framerate)
-    silence_data = np.zeros(silence_duration_frames, dtype=np.int16)
+        # 產生空白音訊資料
+        silence_duration_frames = int(silence_duration_sec * framerate)
+        silence_data = np.zeros(silence_duration_frames, dtype=np.int16)
 
-    # 將空白音訊資料加到音訊的前後
-    new_audio_data = np.concatenate((silence_data, audio_data, silence_data))
+        # 將空白音訊資料加到音訊的前後
+        new_audio_data = np.concatenate((silence_data, audio_data, silence_data))
 
-    # 建立新的WAV檔案
-    with wave.open(output_file, 'wb') as output_wav:
-        output_wav.setparams((wav.getnchannels(), sample_width, framerate, len(new_audio_data), wav.getcomptype(), wav.getcompname()))
-        output_wav.writeframes(new_audio_data.tobytes())
+        # 建立新的WAV檔案
+        with wave.open(output_file, 'wb') as output_wav:
+            output_wav.setparams((wav.getnchannels(), sample_width, framerate, len(new_audio_data), wav.getcomptype(), wav.getcompname()))
+            output_wav.writeframes(new_audio_data.tobytes())
 
-    # 關閉原始WAV檔案
-    wav.close()
+        # 關閉原始WAV檔案
+        wav.close()
+    except:
+        pass
 HOST = "127.0.0.1"
 #HOST = "172.20.10.3"
 PORT = 4000
@@ -123,56 +126,14 @@ def post_process_positive_negative(input):
     return "無法辨識"
 def post_process_number(input):
 
-    
-    # dot = ["ian"]
-    # zero = ["in"]
-    # one = ["yi"]
-    # two = ["e"]
-    # three = ["an"]
-    # four = ["s","i"]
-    # five = ["w","u"]
-    # six = ["l","iu"]
-    # seven = ["i"]
-    # eight = ["a"]
-    # nine = ["iu"]
-    
-
-
-
-
-    # mix = [dot,zero,one,two,three,four,five,six,eight,nine,seven]
-    # table= ["點","零","一","二","三","四","五","六","八","九","七",]
-
-    # all = ""
-    # for i in range(len(input)):
-    #     for x in range(len(mix)):
-    #         w = 0
-    #         for b in range(len(mix[x])):
-                
-    #             if(mix[x][b] in input[i]):
-    #                 if(b==len(mix[x])-1):
-    #                     all+=table[x]
-    #                     w=1
-                        
-    #                 else:
-    #                     continue
-    #             else:
-    #                 break
-    #         if(w==1):
-    #             break
-                
-    # if(all==""):
-    #     return "無法辨識"
-    # else:
-    #     return all
     negative = ["u"]
     positive = ["e","iu"]   
     mix2 = [positive,negative]
-    table2= ["正","負"]
+    table2= ["+","-"]
     result = ""
     for i in range(1):        
         all = list()                                # numbers from 0 to 9     
-        sound = AudioSegment.from_wav(f'temp.wav')
+        sound = AudioSegment.from_wav(f'temp2.wav')
         #get 分貝數
         dBFS = sound.dBFS
         print(dBFS)
@@ -198,8 +159,10 @@ def post_process_number(input):
             add_silence_to_wav_file(input_file, output_file, silence_duration_sec)
             res = ms.recognize_speech_from_file(input_file)
             print(res)
-  
-            all.append(res[0])
+            if('dian3' in res):
+                all.append('dian3')
+            else:
+                all.append(res[0])
             if(j==0):
                 for i in range(len(res)):
                     for x in range(len(mix2)):
@@ -212,6 +175,8 @@ def post_process_number(input):
                                 break
                                     
                         if(w==1):
+                            break
+                    if(w==1):
                             break
                 all = list()
         print(result)
@@ -236,7 +201,7 @@ def post_process_number(input):
 
 
         mix = [dot,zero,one,two,three,four,five,six,eight,nine,seven]
-        table= ["點","零","一","二","三","四","五","六","八","九","七",]
+        table= [".","0","1","2","3","4","5","6","8","9","7",]
 
         for i in range(len(all)):
             for x in range(len(mix)):

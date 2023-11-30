@@ -5,7 +5,7 @@
             'localhost',  // MySQL主機名稱 
             'test',       // 使用者名稱 
             'danny',  // 密碼 
-            'test7');  // 預設使用的資料庫名稱 
+            'test9');  // 預設使用的資料庫名稱 
         if ( !$link ) {
             echo "MySQL資料庫連接錯誤!<br/>";
             exit();
@@ -18,7 +18,9 @@
     function insert($link,$machine,$variable1,$variable2){
         // sql語法存在變數中
         echo "in data";
-        $sql = "INSERT INTO `mytest` (`name`, `num1`, `num2`) VALUES ('$machine', '$variable1', '$variable2');";
+        $now = new DateTime();
+        $formattedNow = $now->format('Y-m-d H:i:s');
+        $sql = "INSERT INTO `log_info_machine` (`time`, `machine`, `mechanical_part_parameter`,`variable`) VALUES ('$formattedNow','$machine', '$variable1', '$variable2');";
         // 用mysqli_query方法執行(sql語法)將結果存在變數中
         $result = mysqli_query($link,$sql);
         // 如果有異動到資料庫數量(更新資料庫)
