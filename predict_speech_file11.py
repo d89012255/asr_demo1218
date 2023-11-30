@@ -201,7 +201,7 @@ def post_process_number(input):
 
 
         mix = [dot,zero,one,two,three,four,five,six,eight,nine,seven]
-        table= [".","0","1","2","3","4","5","6","8","9","7",]
+        table= [".","0","1","2","3","4","5","6","8","9","7"]
 
         for i in range(len(all)):
             for x in range(len(mix)):

@@ -330,6 +330,7 @@ function playRec(){
                                         Myelement = document.getElementById(assembling_now);
                                         var temp = Myelement.value;
                                         give_out.push(temp);
+                                        Myelement.value = "";
                                     }
                                     assembling_num = 1
                                     assembling_now = name_of_assembling[assembling_name]+assembling_num;
@@ -442,6 +443,7 @@ function playRec(){
                         console.log("Switch on");
                         assembling_num = 1;
                         assembling_name =0;
+                        Myelement.focus();
                     }                   
 
                         
@@ -486,7 +488,7 @@ function start_before(){
             msg.volume = 20; // 聲音的音量
             msg.rate = 5; //語速，數值，預設值是1，範圍是0.1到10
             msg.pitch = 1.0;                 
-            speechSynthesis.speak(msg);
+            //speechSynthesis.speak(msg);
             times.innerHTML = "7";
         },1000+count*12000);
         setTimeout(function(){
@@ -496,7 +498,7 @@ function start_before(){
             msg.volume = 20; // 聲音的音量
             msg.rate = 5; //語速，數值，預設值是1，範圍是0.1到10
             msg.pitch = 1.0;                 
-            speechSynthesis.speak(msg);
+            //speechSynthesis.speak(msg);
             times.innerHTML = "6";
         },2000+count*12000);
         setTimeout(function(){
@@ -506,7 +508,7 @@ function start_before(){
             msg.volume = 20; // 聲音的音量
             msg.rate = 6; //語速，數值，預設值是1，範圍是0.1到10
             msg.pitch = 1.0;                 
-            speechSynthesis.speak(msg);
+            //speechSynthesis.speak(msg);
             times.innerHTML = "5";
         },3000+count*12000);
         setTimeout(function(){
@@ -516,7 +518,7 @@ function start_before(){
             msg.volume = 20; // 聲音的音量
             msg.rate = 6; //語速，數值，預設值是1，範圍是0.1到10
             msg.pitch = 1.0;                 
-            speechSynthesis.speak(msg);
+            //speechSynthesis.speak(msg);
             times.innerHTML = "4";
         },4000+count*12000);
         setTimeout(function(){
@@ -526,7 +528,7 @@ function start_before(){
             msg.volume = 20; // 聲音的音量
             msg.rate = 6; //語速，數值，預設值是1，範圍是0.1到10
             msg.pitch = 1.0;                 
-            speechSynthesis.speak(msg);
+            //speechSynthesis.speak(msg);
             times.innerHTML = "3";
         },5000+count*12000);
         setTimeout(function(){
@@ -536,7 +538,7 @@ function start_before(){
             msg.volume = 20; // 聲音的音量
             msg.rate = 6; //語速，數值，預設值是1，範圍是0.1到10
             msg.pitch = 1.0;                 
-            speechSynthesis.speak(msg);
+            //speechSynthesis.speak(msg);
             times.innerHTML = "2";
         },6000+count*12000);
         setTimeout(function(){
@@ -546,7 +548,7 @@ function start_before(){
             msg.volume = 20; // 聲音的音量
             msg.rate = 6; //語速，數值，預設值是1，範圍是0.1到10
             msg.pitch = 1.0;                 
-            speechSynthesis.speak(msg);
+            //speechSynthesis.speak(msg);
             times.innerHTML = "1";
         },7000+count*12000);
         setTimeout(function(){
@@ -556,7 +558,7 @@ function start_before(){
             msg.volume = 20; // 聲音的音量
             msg.rate = 6; //語速，數值，預設值是1，範圍是0.1到10
             msg.pitch = 1.0;                 
-            speechSynthesis.speak(msg);
+            //speechSynthesis.speak(msg);
             playRec();
            times.innerHTML = "辨識中";
         },8000+count*12000);
