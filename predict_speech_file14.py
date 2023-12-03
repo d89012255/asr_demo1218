@@ -355,12 +355,18 @@ print(qq)
 ms.load_model(qq)
 while True:
     conn, addr = server.accept()
+    # 接收音檔
+    received_data = b''
+    while True:
+        data = conn.recv(4194304)
+        if not data:
+            break
+        received_data += data
     ss = []
-    clientMessage = conn.recv(4194304)
     if(os.path.exists("temp2.wav")):        
         os.remove("temp2.wav")
     f = open("temp2.wav", "wb")
-    f.write(clientMessage)
+    f.write(received_data)
     f.close()
 
 

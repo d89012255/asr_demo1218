@@ -33,6 +33,7 @@ var cooperation_switch = false;
 var number_check = true;
 var number_upload = false;
 var open_db = false;
+var state_in_input = true;
 //取得cookie值的函式(用在取回辨識結果)
 function getCookie(name)
 { 
@@ -92,13 +93,33 @@ function clean_disable(num){
         Myelement.disabled = false;
     }
 }
+
+function clean_all(){
+    console.log("inin2")
+    for(var i=1;i<4;i++){
+        assembling_now = name_of_assembling[assembling_name]+i;
+        console.log(assembling_now);
+        Myelement = document.getElementById(assembling_now);
+        Myelement.disabled = true;
+    }
+}
+function able_first(){
+    console.log("inin3")
+    for(var i=1;i<4;i++){
+        assembling_now = name_of_assembling[assembling_name]+i;
+        console.log(assembling_now);
+        Myelement = document.getElementById(assembling_now);
+        Myelement.disabled = false;
+    }
+}
 //停止錄音
 function playRec(){ 
     //停止錄音，得到了錄音文件blob二進位對象，想幹嘛就幹嘛    
     rec.stop(function(blob,duration){ 
         recBlob=blob;
         var fileReader = new FileReader();
-        fileReader.readAsText(blob);       
+        fileReader.readAsText(blob);
+        console.log(blob.length);       
         fileReader.onload = function() {          
             var indexBase64 =  fileReader.result;
             var start_time = new Date().getTime();
@@ -143,10 +164,16 @@ function playRec(){
                                 cooperation_switch = true;
                                 open_db = false;
                                 open_cooperation_switch = false;
-                                elementinput.style.display = '';
-                                elementdatabase.style.display = 'none';
+                                state_in_input = true;
+                                clean_all();
                                 assembling_num = 1;
                                 assembling_name =0;
+                                able_first();
+                                assembling_now = name_of_assembling[assembling_name]+assembling_num;
+                                Myelement = document.getElementById(assembling_now);
+                                
+                                elementinput.style.display = '';
+                                elementdatabase.style.display = 'none';
                                 Myelement.focus();
                             }
                             else{
@@ -195,11 +222,14 @@ function playRec(){
                         }
                         else if(out=="取消"){
                             if(open_cooperation_switch){
-                                open_cooperation_switch = false;
+                                if(!state_in_input)
+                                    open_cooperation_switch = false;
                             }
                             else{
-                                console.log("Close db");
-                                open_db = false;
+                                if(state_in_input){
+                                    console.log("Close db");
+                                    open_db = false;
+                                }
                             }
                         }
                         else if(out=="下一頁"){
@@ -360,12 +390,12 @@ function playRec(){
                                 Myelement.focus();
                             }
                             //控制協作系統開關
-                            else if(out=="鎖定"){
-                                cooperation_switch = false;
-                                open_db = true;
-                            }
                             else if(out=="暫存"){
                                 cooperation_switch = true;
+                            }
+                            else if(out=="取消"){
+                                Myelement.focus();
+                                number_upload = false;
                             }
                             //控制輸入頁面跳動
                             else if(out=="上一點"){
@@ -415,7 +445,8 @@ function playRec(){
                                 console.log("DB　Switch on");
                             }
                             else if(out=="鎖定"){
-                                cooperation_switch = false;                                
+                                cooperation_switch = false;
+                                console.log("備索")                          
                             }
                             else{
                                 Myelement.value=out;
@@ -488,7 +519,7 @@ function start_before(){
             msg.volume = 20; // 聲音的音量
             msg.rate = 5; //語速，數值，預設值是1，範圍是0.1到10
             msg.pitch = 1.0;                 
-            //speechSynthesis.speak(msg);
+            speechSynthesis.speak(msg);
             times.innerHTML = "7";
         },1000+count*12000);
         setTimeout(function(){
@@ -498,7 +529,7 @@ function start_before(){
             msg.volume = 20; // 聲音的音量
             msg.rate = 5; //語速，數值，預設值是1，範圍是0.1到10
             msg.pitch = 1.0;                 
-            //speechSynthesis.speak(msg);
+            speechSynthesis.speak(msg);
             times.innerHTML = "6";
         },2000+count*12000);
         setTimeout(function(){
@@ -508,7 +539,7 @@ function start_before(){
             msg.volume = 20; // 聲音的音量
             msg.rate = 6; //語速，數值，預設值是1，範圍是0.1到10
             msg.pitch = 1.0;                 
-            //speechSynthesis.speak(msg);
+            speechSynthesis.speak(msg);
             times.innerHTML = "5";
         },3000+count*12000);
         setTimeout(function(){
@@ -518,7 +549,7 @@ function start_before(){
             msg.volume = 20; // 聲音的音量
             msg.rate = 6; //語速，數值，預設值是1，範圍是0.1到10
             msg.pitch = 1.0;                 
-            //speechSynthesis.speak(msg);
+            speechSynthesis.speak(msg);
             times.innerHTML = "4";
         },4000+count*12000);
         setTimeout(function(){
@@ -528,7 +559,7 @@ function start_before(){
             msg.volume = 20; // 聲音的音量
             msg.rate = 6; //語速，數值，預設值是1，範圍是0.1到10
             msg.pitch = 1.0;                 
-            //speechSynthesis.speak(msg);
+            speechSynthesis.speak(msg);
             times.innerHTML = "3";
         },5000+count*12000);
         setTimeout(function(){
@@ -538,7 +569,7 @@ function start_before(){
             msg.volume = 20; // 聲音的音量
             msg.rate = 6; //語速，數值，預設值是1，範圍是0.1到10
             msg.pitch = 1.0;                 
-            //speechSynthesis.speak(msg);
+            speechSynthesis.speak(msg);
             times.innerHTML = "2";
         },6000+count*12000);
         setTimeout(function(){
@@ -548,7 +579,7 @@ function start_before(){
             msg.volume = 20; // 聲音的音量
             msg.rate = 6; //語速，數值，預設值是1，範圍是0.1到10
             msg.pitch = 1.0;                 
-            //speechSynthesis.speak(msg);
+            speechSynthesis.speak(msg);
             times.innerHTML = "1";
         },7000+count*12000);
         setTimeout(function(){
@@ -558,7 +589,7 @@ function start_before(){
             msg.volume = 20; // 聲音的音量
             msg.rate = 6; //語速，數值，預設值是1，範圍是0.1到10
             msg.pitch = 1.0;                 
-            //speechSynthesis.speak(msg);
+            speechSynthesis.speak(msg);
             playRec();
            times.innerHTML = "辨識中";
         },8000+count*12000);

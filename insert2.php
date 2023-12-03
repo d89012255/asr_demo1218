@@ -18,8 +18,8 @@
     function insert($link,$machine,$variable1,$variable2){
         // sql語法存在變數中
         echo "in data";
-        $now = new DateTime();
         date_default_timezone_set("Asia/Taipei");
+        $now = new DateTime();
         $formattedNow = $now->format('Y-m-d H:i:s');
         $sql = "INSERT INTO `log_info_machine` (`time`, `machine`, `mechanical_part_parameter`,`variable`) VALUES ('$formattedNow','$machine', '$variable1', '$variable2');";
         // 用mysqli_query方法執行(sql語法)將結果存在變數中
